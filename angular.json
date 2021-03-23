@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "prototype-carousel"
+    }
+  },
+  "defaultProject": "prototype-carousel",
+  "cli": {
+    "analytics": false
+  }
 }
