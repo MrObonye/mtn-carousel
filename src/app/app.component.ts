@@ -31,6 +31,7 @@ export class AppComponent implements OnInit {
     centeredSlides: true,
     loop: true,
     grabCursor: true,
+    speed: 500,
     breakpoints: {
       1080: {
         slidesPerView: 5,
