@@ -37,19 +37,24 @@ $primary-sunshine: #FFCC00;
         line-height: 40px;
         font-size: 29px;
       }
-      @media (min-width: 1918px) {
+      @media (min-width: 1920px) {
         width: 216px;
-        margin-left: -137px;
+        margin-left: 174px;
       }
+
       .fw-light {
         font-weight: 400;
       }
     }
   }
-  }
-  /* @media (min-width: 1336px) {
+  @media (min-width: 1336px) {
     margin-top: 160px;
-  } */
+  }
+  @media (min-width: 1920px) {
+    margin-top: 160px;
+  }
+  }
+
 .wrapper {
   height: 430px;
   width: 1080px;
@@ -98,12 +103,12 @@ $primary-sunshine: #FFCC00;
         color: $primary-sunshine;
       }
     }
-    .swiper-button-prev {
+   /*  .swiper-button-prev {
       margin-left: -40px;
     }
     .swiper-button-next {
       margin-right: -40px;
-    }
+    } */
   }
 }
 .arrow {
