@@ -31,15 +31,17 @@ export class AppComponent implements OnInit {
     centeredSlides: true,
     loop: true,
     grabCursor: true,
-    effect: 'slide',
     breakpoints: {
       1080: {
         slidesPerView: 5,
         spaceBetween: 16,
+        centeredSlides: true
       },
       1366: {
         slidesPerView: 5,
-        spaceBetween: 34,
+        spaceBetween: 24,
+        slidesOffsetBefore: 30,
+        centeredSlides: true
       },
       1920: {
         slidesPerView: 5,
