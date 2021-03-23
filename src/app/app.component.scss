@@ -99,8 +99,7 @@ $primary-sunshine: #FFCC00;
     top: -5.625rem;
   }
   @media (min-width: 1920px) {
-    left: -15.25rem !important;
-    top: -14.8125rem;
+ 
   }
 }
 
@@ -120,8 +119,8 @@ $primary-sunshine: #FFCC00;
   }
   @media (min-width: 1920px) {
     margin-right: 4.125rem;
-    top: -15.625rem;
-    right: 19.125rem;
+    // top: -15.625rem;
+    right: 2.125rem;
   }
 }
 
@@ -129,7 +128,7 @@ $primary-sunshine: #FFCC00;
 .swiper-container-rtl .swiper-button-prev {
   @media (min-width: 1920px) {
     left: auto;
-    right: 19rem;
+    // right: 19rem;
   }
 }
 .swiper-button-next:after {
