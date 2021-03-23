@@ -3,7 +3,13 @@ $raven:  #232323;
 $primary-sunshine: #FFCC00;
 
 /************************** Carousel ****************  */
-
+.page-wrapper {
+  height: 100vh;
+  @media (min-width: 1366px) {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
 .carousel-wrapper {
   display: flex;
   justify-content: space-between;
@@ -24,7 +30,17 @@ $primary-sunshine: #FFCC00;
       letter-spacing: -0.2px;
       line-height: 28px;
       text-align: left;
-
+      @media (min-width: 1336px) {
+        margin-left: -14px;
+        margin-bottom: 36px;
+        width: 200px;
+        line-height: 40px;
+        font-size: 29px;
+      }
+      @media (min-width: 1918px) {
+        width: 216px;
+        margin-left: -137px;
+      }
       .fw-light {
         font-weight: 400;
       }
