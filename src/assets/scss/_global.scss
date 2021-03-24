@@ -5,16 +5,23 @@ $primary-sunshine: #FFCC00;
 /************************** Carousel ****************  */
 .page-wrapper {
   height: 100vh;
-  @media (min-width: 1366px) {
+  @media only screen and (min-width: 1366px) {
     margin-left: 60px;
     margin-right: 60px;
+  }
+  @media only screen and (min-width: 1920px) {
+    width: 100vw;
+    max-width: 1416px;
+    margin-left: 252px;
+    margin-right: 252px;
+    background-color: white;
   }
 }
 .carousel-wrapper {
   display: flex;
   justify-content: space-between;
 
-  @media (min-width: 1080px) {
+  @media only screen and (min-width: 1080px) {
     margin-top: 208px;
     .what-are-you-here-to {
       position: relative;
@@ -30,16 +37,16 @@ $primary-sunshine: #FFCC00;
       letter-spacing: -0.2px;
       line-height: 28px;
       text-align: left;
-      @media (min-width: 1336px) {
+      @media only screen and (min-width: 1336px) {
         margin-left: -14px;
         margin-bottom: 36px;
         width: 200px;
         line-height: 40px;
         font-size: 29px;
       }
-      @media (min-width: 1918px) {
+      @media only screen and (min-width: 1920px) {
         width: 216px;
-        margin-left: -137px;
+        margin-left: 25px;
       }
       .fw-light {
         font-weight: 400;
@@ -59,7 +66,7 @@ $primary-sunshine: #FFCC00;
   position: relative;
   // opacity: 0.16;
 
-  @media (min-width: 1080px) {
+  @media only screen and (min-width: 1080px) {
     .cell {
       flex-direction: column;
       box-sizing: border-box;
@@ -107,7 +114,7 @@ $primary-sunshine: #FFCC00;
   }
 }
 .arrow {
-  @media (min-width: 1080px) {
+  @media only screen and (min-width: 1080px) {
     width: 40px;
     height: 40px;
     background-color: black;
