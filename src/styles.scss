@@ -41,6 +41,11 @@ ul {
   height: 100%;
   overflow: visible !important;
   @media only screen and (min-width: 1366px) {
+
+  }
+  @media (min-width: 1920px) {
+    // width: 920px;
+    
   }
 }
 

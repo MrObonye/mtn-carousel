@@ -32,6 +32,7 @@ export class AppComponent implements OnInit {
       nextEl: '.custom-swiper-button-next',
       prevEl: '.custom-swiper-button-prev',
     },
+
     breakpoints: {
       1080: {
         slidesPerView: 5,
@@ -44,11 +45,17 @@ export class AppComponent implements OnInit {
         spaceBetween: 24,
         slidesOffsetBefore: 30,
         centeredSlides: true,
+
+        slidesOffsetBefore: 28,
+        slidesOffsetAfter: 35,
+
       },
       1920: {
         slidesPerView: 5,
         spaceBetween: 24,
         centeredSlides: true,
+        slidesOffsetBefore: 34,
+        loop: true,
       }
     }
   };
