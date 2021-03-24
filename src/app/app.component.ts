@@ -20,16 +20,12 @@ export class AppComponent implements OnInit {
 
   public config: SwiperConfigInterface = {
     direction: 'horizontal',
-    keyboard: true,
+    keyboard: false,
     mousewheel: false,
     scrollbar: false,
-    navigation: {
-      nextEl: '.custom-swiper-button-next',
-      prevEl: '.custom-swiper-button-prev',
-    },
     pagination: false,
     centeredSlides: true,
-    loop: true,
+    initialSlide: 2,
     grabCursor: true,
     breakpoints: {
       1080: {
