@@ -36,6 +36,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     const cells = this.document.querySelectorAll('.cell');
     const proxy = this.document.createElement('div');
 
+
     const cellWidth = 450;
     // var rotationX = 90;
 
@@ -71,7 +72,6 @@ export class AppComponent implements OnInit, AfterViewInit {
       onThrowComplete() {
         console.log('onThrowComplete');
         // TODO: animation that inject selected card title
-  
       }
     });
 
@@ -81,23 +81,25 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     function updateProgress() {
       animation.progress(this.x / wrapWidth);
+
     }
 
-    function initCell(element, index) {
+    function initCell(element, index: number) {
 
       gsap.set(element, {
         width: cellWidth,
         scale: 0.6,
         // rotationX: rotationX,
-        x: -cellWidth
+        x: -cellWidth,
+        duration: 1
       });
 
       const tl = gsap.timeline({ repeat: 1 });
 
-      tl.to(element, {duration: 1, x: '+=' + wrapWidth }, 0)
+      tl.to(element, { duration: 1, x: '+=' + wrapWidth }, 0)
         .to(
           element,
-          { color: '#009688', scale: 1, repeat: 1, yoyo: true },
+          { duration: cellStep, color: '#009688', scale: 1, repeat: 1, yoyo: true },
           0.5 - cellStep
         );
 
