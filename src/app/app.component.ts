@@ -29,7 +29,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     gsap.registerPlugin(Draggable);
   }
 
-
   ngAfterViewInit() {
     gsap.defaults({ ease: 'none' });
 
@@ -72,6 +71,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       onThrowComplete() {
         console.log('onThrowComplete');
         // TODO: animation that inject selected card title
+  
       }
     });
 
