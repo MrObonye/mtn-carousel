@@ -46,9 +46,6 @@ export class AppComponent implements OnInit {
         slidesOffsetBefore: 30,
         centeredSlides: true,
 
-        slidesOffsetBefore: 28,
-        slidesOffsetAfter: 35,
-
       },
       1920: {
         slidesPerView: 5,
