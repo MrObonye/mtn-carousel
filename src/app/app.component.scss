@@ -1,4 +1,14 @@
+/* Variables */
+$raven:  #232323;
+$primary-sunshine: #FFCC00;
+
 :host{
+  @media (min-width: 1080px){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $primary-sunshine;
+  }
   @media (min-width: 1920px) {
     display: flex;
     flex-direction: column;
@@ -6,10 +16,9 @@
     background-color: whitesmoke;
   }
 
+
 }
-/* Variables */
-$raven:  #232323;
-$primary-sunshine: #FFCC00;
+
 
 * {
   box-sizing: border-box;
@@ -99,7 +108,7 @@ $primary-sunshine: #FFCC00;
 }
 
 .swiper-button-prev {
-  left: auto !important;
+  left: 53px;
   top: auto;
   position: inherit;
   outline: none;
@@ -116,7 +125,7 @@ $primary-sunshine: #FFCC00;
   content: "";
 }
 .swiper-button-next {
-  left: auto !important;
+  right: -34px;
   top: auto;
   position: inherit;
   margin-left: auto;

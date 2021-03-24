@@ -24,8 +24,6 @@ export class AppComponent implements OnInit {
     mousewheel: false,
     scrollbar: false,
     pagination: false,
-    centeredSlides: true,
-    loop: false,
     initialSlide: 2,
     grabCursor: true,
     navigation: {
@@ -52,7 +50,6 @@ export class AppComponent implements OnInit {
         spaceBetween: 24,
         centeredSlides: true,
         slidesOffsetBefore: 34,
-        loop: true,
       }
     }
   };

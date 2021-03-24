@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <div class="wrapper container">
+  <div class="wrapper container d-flex justify-content-center">
     <swiper [config]="config" [(index)]="index" (indexChange)="trackIndex(index)">
       <div
       *ngFor="let slide of slides; let i;"

@@ -1,0 +1,23 @@
+.navbar {
+  width: 100vw;
+  .navbar-brand {
+    @media only screen and (min-width: 1080px) {
+      margin-left: 164px;
+      position: absolute;
+      top: 0;
+      background-color: $primary-sunshine;
+      border: 2px white solid;
+      height: 80px;
+      width: 80px;
+      font-size: 1rem;
+    }
+    .navbar-toggler-icon {
+      display: block;
+    }
+  }
+  @media (min-width: 1080px) {
+    height: 64px;
+    width: 1080px;
+    background-color: rgba(255, 255, 255, 0.96);
+  }
+}
