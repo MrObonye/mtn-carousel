@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 @import "./assets/scss/global";
+@import './assets/scss/navbar';
 
 /* Font Family */
 html,
@@ -7,7 +9,7 @@ body {
   font-family: "Work Sans", sans-serif;
   scroll-behavior: smooth;
   overflow: hidden;
-  background-color: #ddd;
+  background-color: whitesmoke;
 }
 ul {
   list-style-type: none;
@@ -45,7 +47,7 @@ ul {
 swiper > .swiper.s-wrapper .swiper-wrapper .swiper-slide {
   overflow: hidden !important;
 
- 
+
 }
 .swiper-slide-next {
   margin-left: 16px;

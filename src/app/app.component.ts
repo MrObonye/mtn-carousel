@@ -27,22 +27,29 @@ export class AppComponent implements OnInit {
     centeredSlides: true,
     initialSlide: 2,
     grabCursor: true,
+    navigation: {
+      nextEl: '.custom-swiper-button-next',
+      prevEl: '.custom-swiper-button-prev',
+    },
     breakpoints: {
       1080: {
         slidesPerView: 5,
         spaceBetween: 16,
-        centeredSlides: true
+        centeredSlides: true,
+        loop: true
       },
       1366: {
         slidesPerView: 5,
         spaceBetween: 24,
         slidesOffsetBefore: 30,
-        centeredSlides: true
+        centeredSlides: true,
+        loop: true
       },
       1920: {
         slidesPerView: 5,
         spaceBetween: 24,
         centeredSlides: true,
+        loop: false
       }
     }
   };

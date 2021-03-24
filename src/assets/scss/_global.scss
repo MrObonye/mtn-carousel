@@ -9,6 +9,13 @@ $primary-sunshine: #FFCC00;
     margin-left: 60px;
     margin-right: 60px;
   }
+  @media (min-width: 1920px) {
+    width: 100vw;
+    max-width: 1416px;
+    margin-left: 252px;
+    margin-right: 252px;
+    background-color: white;
+  }
 }
 .carousel-wrapper {
   display: flex;
@@ -39,7 +46,7 @@ $primary-sunshine: #FFCC00;
       }
       @media (min-width: 1920px) {
         width: 216px;
-        margin-left: 146px;
+        margin-left: 25px;
       }
       .fw-light {
         font-weight: 400;
