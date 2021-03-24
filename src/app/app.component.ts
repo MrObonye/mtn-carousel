@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import {
-   SwiperConfigInterface,
-} from 'ngx-swiper-wrapper';
+import { DOCUMENT } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, Inject, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { gsap } from 'gsap';
+import { Draggable } from 'gsap/Draggable';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  index: number;
+export class AppComponent implements OnInit, AfterViewInit {
+  /* index: number;
+  picker: any;
+  cells: any;
+  proxy: any;
+
+  @ViewChild('picker', { static: false }) pickerEl: ElementRef;
+  @ViewChildren('cell') cellsEls: QueryList<ElementRef>; */
+
   slides = [
     { id: 1, title: 'Mobile internet', action: 'Start here', link: '#' },
     { id: 2, title: 'Home internet', action: 'Start here', link: '#' },
@@ -17,56 +24,85 @@ export class AppComponent implements OnInit {
     { id: 4, title: 'Add a phone-line', action: 'Start here', link: '#' },
     { id: 5, title: 'Upgrade', action: 'Start here', link: '#' }
   ];
+  constructor(@Inject(DOCUMENT) private document) { }
+  ngOnInit() {
+    gsap.registerPlugin(Draggable);
+  }
 
-  public config: SwiperConfigInterface = {
-    direction: 'horizontal',
-    keyboard: true,
-    mousewheel: false,
-    scrollbar: false,
-    navigation: {
-      nextEl: '.custom-swiper-button-next',
-      prevEl: '.custom-swiper-button-prev',
-    },
-    pagination: false,
-    centeredSlides: true,
-    loop: true,
-    grabCursor: true,
-    speed: 500,
-    breakpoints: {
-      1080: {
-        slidesPerView: 5,
-        spaceBetween: 16,
-        centeredSlides: true,
-        loop: true
-      },
-      1366: {
-        slidesPerView: 5,
-        spaceBetween: 24,
-        slidesOffsetBefore: 28,
-        slidesOffsetAfter: 35,
-        centeredSlides: true,
-        loop: true
-      },
-      1920: {
-        slidesPerView: 5,
-        spaceBetween: 24,
-        centeredSlides: true,
-        slidesOffsetBefore: 34,
-        loop: true,
-      }
+  ngAfterViewInit() {
+    gsap.defaults({ ease: 'none' });
+
+    const picker = this.document.querySelector('.picker');
+    const cells = this.document.querySelectorAll('.cell');
+    const proxy = this.document.createElement('div');
+
+    const cellWidth = 450;
+    // var rotationX = 90;
+
+    const numCells = cells.length;
+    const cellStep = 1 / numCells;
+    const wrapWidth = cellWidth * numCells;
+
+    const baseTl = gsap.timeline({ paused: true });
+
+    gsap.set(picker, {
+      // perspective: 1100,
+      width: wrapWidth - cellWidth
+    });
+
+    for (let i = 0; i < cells.length; i++) {
+      initCell(cells[i], i);
     }
-  };
 
-  constructor() { }
+    const animation = gsap.timeline({ repeat: -1, paused: true }).add(
+      baseTl.tweenFromTo(1, 2)
+    );
 
-  ngOnInit(): void {
+    const draggable = Draggable.create(proxy, {
+      // allowContextMenu: true,
+      type: 'x',
+      trigger: picker,
+      throwProps: true,
+      onDrag: updateProgress,
+      onThrowUpdate: updateProgress,
+      snap: {
+        x: snapX
+      },
+      onThrowComplete() {
+        console.log('onThrowComplete');
+        // TODO: animation that inject selected card title
+  
+      }
+    });
+
+    function snapX(x) {
+      return Math.round(x / cellWidth) * cellWidth;
+    }
+
+    function updateProgress() {
+      animation.progress(this.x / wrapWidth);
+    }
+
+    function initCell(element, index) {
+
+      gsap.set(element, {
+        width: cellWidth,
+        scale: 0.6,
+        // rotationX: rotationX,
+        x: -cellWidth
+      });
+
+      const tl = gsap.timeline({ repeat: 1 });
+
+      tl.to(element, {duration: 1, x: '+=' + wrapWidth }, 0)
+        .to(
+          element,
+          { color: '#009688', scale: 1, repeat: 1, yoyo: true },
+          0.5 - cellStep
+        );
+
+      baseTl.add(tl, index * -cellStep);
+    }
   }
-
-  gotoLink(link: string) {
-    console.log('goto link', link);
-  }
-trackIndex(index) {
-  console.log(index);
-
 }
-}
+

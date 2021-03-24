@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar>
 <div class="page-wrapper">
   <div class="d-block carousel-wrapper">
     <div class="row ">
@@ -11,40 +11,35 @@
     </div>
   </div>
 
-  <div class="wrapper container">
-    <swiper [config]="config" [(index)]="index" (indexChange)="trackIndex(index)">
-      <div
-      *ngFor="let slide of slides; let i;"
-      class="swiper-slide cell d-flex justify-content-center align-items-center">
-        <div class="item-image">
-          <i class="fa fa-images display-3"></i>
-        </div>
-        <div class="item-title">{{slide.title}}</div>
-        <div class="item-button">
-          <a (click)="gotoLink(slide.link)">{{slide.action}} <i class="fas fa-chevron-right ml-1"></i></a>
-        </div>
-      </div>
-    </swiper>
-  </div>
 
-  <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="col-2">
-        <div class="swiper-button-prev custom-swiper-button-prev">
-          <span class="arrow d-flex justify-content-center align-items-center p-3"><i class="fas fa-chevron-left"></i></span>
-        </div>
-      </div>
-      <div class="col-5"></div>
-      <div class="col-2">
-        <div class="swiper-button-next custom-swiper-button-next">
-          <span class="arrow d-flex justify-content-center align-items-center p-3"><i class="fas fa-chevron-right"></i></span>
-        </div>
-      </div>
+
+</div> -->
+
+<main>
+  <div id="picker" class="picker d-flex justify-content-center" #picker>
+    <div class="cell" #cell>
+      <div class="cell-content">Card 1</div>
     </div>
-
-
-
+    <div class="cell" #cell>
+      <div class="cell-content">Card 2</div>
+    </div>
+    <div class="cell" #cell>
+      <div class="cell-content">Card 3</div>
+    </div>
+    <div class="cell" #cell>
+      <div class="cell-content">Card 4</div>
+    </div>
+    <div class="cell" #cell>
+      <div class="cell-content">Card 5</div>
+    </div>
+    <div class="cell" #cell>
+      <div class="cell-content">Card 6</div>
+    </div>
+    <div class="cell" #cell>
+      <div class="cell-content">Card 7</div>
+    </div>
+    <div class="cell" #cell>
+      <div class="cell-content">Card 8</div>
+    </div>
   </div>
-</div>
-
-
+</main>
