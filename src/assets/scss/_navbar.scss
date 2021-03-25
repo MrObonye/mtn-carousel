@@ -1,23 +1,32 @@
 .navbar {
   width: 100vw;
+  background-color: rgba(255,255,255,0.96);
   .navbar-brand {
     @media only screen and (min-width: 1080px) {
-      margin-left: 164px;
+      margin-left: 10.25rem;
       position: absolute;
       top: 0;
       background-color: $primary-sunshine;
       border: 2px white solid;
-      height: 80px;
-      width: 80px;
+      height: 5rem;
+      width: 5rem;
       font-size: 1rem;
     }
-    .navbar-toggler-icon {
-      display: block;
+    @media only screen and (min-width: 1366px) {
+      margin-left: 10.9375rem;
+      height: 5.5rem;
+      width: 5.5rem;
+    }
+    @media only screen and (min-width: 1920px) {
+      margin-left: 23.25rem;
+      height: 6rem;
+      width: 6rem;
     }
   }
   @media (min-width: 1080px) {
-    height: 64px;
-    width: 100vw;
-    background-color: rgba(255, 255, 255, 0.96);
+    height: 4rem;
+  }
+  @media only screen and (min-width: 1920px) {
+    height: 5rem;
   }
 }
