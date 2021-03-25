@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
     direction: 'horizontal',
     keyboard: false,
     mousewheel: false,
+    slidesPerView: 'auto',
     scrollbar: false,
     pagination: false,
     initialSlide: 2,
@@ -32,6 +33,11 @@ export class AppComponent implements OnInit {
     },
 
     breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+        centeredSlides: true
+      },
       1080: {
         slidesPerView: 5,
         spaceBetween: 16,

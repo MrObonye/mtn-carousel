@@ -23,15 +23,18 @@ $primary-sunshine: #ffcc00;
 .carousel-wrapper {
   display: flex;
   justify-content: space-between;
+  @media (min-width: 768px) {
+    margin-top: 6rem;
+  }
 
   @media only screen and (min-width: 1080px) {
-    margin-top: 7.5rem;
+    margin-top: 5.5rem;
   }
   .what-are-you-here-to {
     position: relative;
     padding-top: 2.5rem;
     padding-bottom: 1.25rem;
-    // margin-left: -2.938rem;
+    left: -2.938rem;
     height: 5rem;
     width: 9.5rem;
     color: #232323;
@@ -42,7 +45,7 @@ $primary-sunshine: #ffcc00;
     line-height: 1.75rem;
     text-align: left;
     @media only screen and (min-width: 1336px) {
-      margin-left: 0.125rem;
+      left: -0.875rem;
       margin-bottom: 2.25rem;
       width: 12.5rem;
       line-height: 2.5rem;
@@ -50,7 +53,7 @@ $primary-sunshine: #ffcc00;
     }
     @media only screen and (min-width: 1920px) {
       width: 13.5rem;
-      margin-left: 2.4375rem;
+      left: 2.4375rem;
     }
 
     .fw-light {
@@ -66,15 +69,15 @@ $primary-sunshine: #ffcc00;
 }
 
 .wrapper {
-  height: 22.875rem;
-  width: 67.5rem;
-  min-width: 21.875rem;
-  margin-top: 3.375rem;
-
   position: relative;
   // opacity: 0.16;
 
+
   @media only screen and (min-width: 1080px) {
+    height: 22.875rem;
+    width: 67.5rem;
+    min-width: 21.875rem;
+    margin-top: 3.375rem;
   }
   .cell {
     flex-direction: column;
@@ -121,7 +124,6 @@ $primary-sunshine: #ffcc00;
       color: $primary-sunshine;
     }
   }
-
 }
 .arrow {
   box-shadow: 0 0.625rem 1.25rem 0 rgba(0, 0, 0, 0.32);
