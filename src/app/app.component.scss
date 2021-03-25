@@ -24,9 +24,8 @@ $primary-sunshine: #FFCC00;
   height: 35.25rem;
   width: 23rem;
   transform: scale(2);
-  animation: ease;
-  // animation-name: run;
-  // animation-duration: 1s;
+  animation: 300ms ease;
+  animation-timing-function: linear;
   background: linear-gradient(180deg, #373737 0%, #191919 100%);
   // border-bottom-width: 0px;
   border: 0px;
@@ -133,3 +132,4 @@ $primary-sunshine: #FFCC00;
 .swiper-button-next:after {
   content: "";
 }
+

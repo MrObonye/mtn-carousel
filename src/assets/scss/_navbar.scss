@@ -1,33 +1,33 @@
 .navbar {
   width: 100vw;
-  background-color: rgba(255,255,255,0.96);
+  background-color: white;
+  font-family: "Work Sans";
   .navbar-brand {
     .logo {
       height: 5rem;
       width: 5rem;
-    @media only screen and (min-width: 1080px) {
-      margin-left: 5.25rem;
-      position: absolute;
-      top: 0;
-      border: 2px white solid;
-      height: 5rem;
-      width: 5rem;
-      font-size: 1rem;
+      @media only screen and (min-width: 1080px) {
+        margin-left: 5.25rem;
+        position: absolute;
+        top: 0;
+        border: 2px white solid;
+        height: 5rem;
+        width: 5rem;
+        font-size: 1rem;
+      }
+      @media only screen and (min-width: 1366px) {
+        margin-left: 10.9375rem;
+        height: 5.5rem;
+        width: 5.5rem;
+      }
+      @media only screen and (min-width: 1920px) {
+        margin-left: 23.25rem;
+        height: 6rem;
+        width: 6rem;
+      }
     }
-    @media only screen and (min-width: 1366px) {
-      margin-left: 10.9375rem;
-      height: 5.5rem;
-      width: 5.5rem;
-    }
-    @media only screen and (min-width: 1920px) {
-      margin-left: 23.25rem;
-      height: 6rem;
-      width: 6rem;
-    }
-  }
 
     /* End of the NavBrand */
-
   }
   .burger {
     display: none;
@@ -41,7 +41,6 @@
     @media (min-width: 1366px) {
       display: none;
     }
-
   }
   .search {
     @media (min-width: 1080px) {
@@ -52,7 +51,10 @@
       text-decoration: none;
       margin-left: 661px;
     }
-
+    @media (min-width: 1366px) {
+      left: -273px;
+      margin-left: 0px;
+    }
   }
   @media (min-width: 1366px) {
     height: 4rem;
@@ -71,9 +73,83 @@
     background-color: $primary-sunshine;
   }
 }
-.links  {
+.links {
   display: none;
-  @media (min-width:1366px) {
+  @media (min-width: 1366px) {
     display: block;
+    font-size: 16px;
+    margin-left: -190px;
+  }
+  .link1 {
+    margin-right: 40px;
+    width: 10%;
+    color: $raven;
+    text-decoration: none;
+  }
+  .link2 {
+    margin-right: 40px;
+    width: 120px;
+    color: $raven;
+    text-decoration: none;
+  }
+  .link3 {
+    margin-right: 40px;
+    width: 140px;
+    color: $raven;
+    text-decoration: none;
   }
 }
+.links > a {
+  font-weight: 500;
+  &:hover {
+    color: $primary-sunshine;
+  }
+}
+
+/* .switch-field {
+	display: none;
+	margin-bottom: 22px;
+	overflow: hidden;
+  @media (min-width: 1366px) {
+display: flex;
+  }
+} */
+
+/* .switch-field input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.switch-field label {
+	background-color: #e4e4e4;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 14px;
+	line-height: 1;
+	text-align: center;
+	padding: 8px 16px;
+	margin-right: -1px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+	transition: all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+	cursor: pointer;
+}
+
+.switch-field input:checked + label {
+	background-color: #bdbdbd;
+	box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+	border-radius: 8px 0px 0 8px;
+}
+
+.switch-field label:last-of-type {
+	border-radius: 0 8px 8px 0;
+} */
