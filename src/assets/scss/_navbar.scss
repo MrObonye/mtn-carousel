@@ -55,6 +55,9 @@
       left: -273px;
       margin-left: 0px;
     }
+    @media (min-width: 1920px) {
+      left: -541px;
+    }
   }
   @media (min-width: 1366px) {
     height: 4rem;
@@ -78,7 +81,12 @@
   @media (min-width: 1366px) {
     display: block;
     font-size: 16px;
-    margin-left: -190px;
+    margin-left: -243px;
+  }
+  @media (min-width: 1920px) {
+    display: block;
+    font-size: 16px;
+    margin-left: -382px;
   }
   .link1 {
     margin-right: 40px;
