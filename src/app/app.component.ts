@@ -41,7 +41,6 @@ export class AppComponent implements OnInit {
       1366: {
         slidesPerView: 5,
         spaceBetween: 24,
-        slidesOffsetBefore: 30,
         centeredSlides: true,
 
       },
@@ -49,7 +48,6 @@ export class AppComponent implements OnInit {
         slidesPerView: 5,
         spaceBetween: 24,
         centeredSlides: true,
-        slidesOffsetBefore: 34,
       }
     }
   };
