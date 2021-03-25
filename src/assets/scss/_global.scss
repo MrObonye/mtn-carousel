@@ -5,6 +5,7 @@ $primary-sunshine: #ffcc00;
 /************************** Carousel ****************  */
 .page-wrapper {
   height: 100vh;
+  background-color: white;
   @media only screen and (min-width: 1080px) {
     // margin-right: 4.875rem;
   }
@@ -17,7 +18,7 @@ $primary-sunshine: #ffcc00;
     max-width: 88.5rem;
     margin-left: 15.75rem;
     margin-right: 15.75rem;
-    background-color: whitesmoke;
+
   }
 }
 .carousel-wrapper {
@@ -29,17 +30,17 @@ $primary-sunshine: #ffcc00;
   }
   .what-are-you-here-to {
     position: relative;
-    padding-top: 2.5rem;
-    padding-bottom: 1.25rem;
-    // margin-left: -2.938rem;
+    padding-top: 0.5rem;
+    margin-left: -47px;
+    padding-bottom: 2.25rem;
     height: 5rem;
-    width: 9.5rem;
+    width: 12.5rem;
     color: #232323;
     font-family: "Work Sans";
-    font-size: 1.5rem;
+    font-size: 31px;
     font-weight: 600;
     letter-spacing: -0.0125rem;
-    line-height: 1.75rem;
+    line-height: 2.75rem;
     text-align: left;
     @media only screen and (min-width: 1336px) {
       margin-left: 0.125rem;
@@ -81,11 +82,11 @@ $primary-sunshine: #ffcc00;
     box-sizing: border-box;
     height: 17.75rem !important;
     width: 12.5rem !important;
-
+    border: 1px solid rgba(150,150,150,0.08);
     border-radius: 0.5rem;
     text-align: center;
     background: linear-gradient(180deg, #ffffff 0%, #ebebeb 100%);
-    box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.32);
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.32);
 
     @media only screen and (min-width: 1920px) {
       box-sizing: border-box;
@@ -121,10 +122,9 @@ $primary-sunshine: #ffcc00;
       color: $primary-sunshine;
     }
   }
-
 }
 .arrow {
-  box-shadow: 0 0.625rem 1.25rem 0 rgba(0, 0, 0, 0.32);
+  box-shadow: 0 0.125rem 0.55rem 0 rgba(0, 0, 0, 0.32);
   @media only screen and (min-width: 1080px) {
     width: 2.5rem;
     height: 2.5rem;
@@ -133,7 +133,7 @@ $primary-sunshine: #ffcc00;
     color: white;
     &:hover {
       background-color: $primary-sunshine;
-      box-shadow: 0 0.625rem 1.25rem 0 rgba(0, 0, 0, 0.32);
+      box-shadow: 0 0.125rem 0.55rem 0 rgba(0, 0, 0, 0.32);
     }
   }
 }

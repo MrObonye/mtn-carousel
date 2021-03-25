@@ -2,11 +2,13 @@
   width: 100vw;
   background-color: rgba(255,255,255,0.96);
   .navbar-brand {
+    .logo {
+      height: 5rem;
+      width: 5rem;
     @media only screen and (min-width: 1080px) {
-      margin-left: 10.25rem;
+      margin-left: 5.25rem;
       position: absolute;
       top: 0;
-      background-color: $primary-sunshine;
       border: 2px white solid;
       height: 5rem;
       width: 5rem;
@@ -23,10 +25,55 @@
       width: 6rem;
     }
   }
-  @media (min-width: 1080px) {
+
+    /* End of the NavBrand */
+
+  }
+  .burger {
+    display: none;
+    @media (min-width: 1080px) {
+      position: relative;
+      display: block;
+      color: $raven;
+      text-decoration: none;
+      left: -108px;
+    }
+    @media (min-width: 1366px) {
+      display: none;
+    }
+
+  }
+  .search {
+    @media (min-width: 1080px) {
+      position: relative;
+      display: block;
+      color: $raven;
+      float: right;
+      text-decoration: none;
+      margin-left: 661px;
+    }
+
+  }
+  @media (min-width: 1366px) {
     height: 4rem;
   }
   @media only screen and (min-width: 1920px) {
     height: 5rem;
+  }
+}
+.progress-status {
+  width: 100vw;
+  background-color: $raven;
+  border-radius: 8px;
+  .bar {
+    width: 96px;
+    height: 8px;
+    background-color: $primary-sunshine;
+  }
+}
+.links  {
+  display: none;
+  @media (min-width:1366px) {
+    display: block;
   }
 }
