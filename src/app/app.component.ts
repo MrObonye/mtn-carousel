@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
     { id: 3, title: 'Get a device', action: 'Start here', link: '#' },
     { id: 4, title: 'Add a phone-line', action: 'Start here', link: '#' },
     { id: 5, title: 'Upgrade', action: 'Start here', link: '#' }
+
   ];
 
   public config: SwiperConfigInterface = {
