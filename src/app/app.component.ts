@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {
    SwiperConfigInterface,
 } from 'ngx-swiper-wrapper';
+import { fromEvent, Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,8 @@ import {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  resizeObservable$: Observable<Event>;
+  private resizeSubscription$: Subscription;
   index: number;
   slides = [
     { id: 1, title: 'Mobile internet', action: 'Start here', link: '#' },
@@ -56,13 +59,18 @@ export class AppComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.resizeObservable$ = fromEvent(window, 'resize');
+    this.resizeSubscription$ = this.resizeObservable$.subscribe( evt => {
+      console.log('event: ', evt);
+      document.defaultView.location.reload();
+    });
   }
 
   gotoLink(link: string) {
     console.log('goto link', link);
   }
 trackIndex(index) {
-  console.log(index);
+  // console.log(index);
 
 }
 }

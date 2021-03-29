@@ -2,6 +2,9 @@
   width: 100vw;
   background-color: white;
   font-family: "Work Sans";
+  @media (min-width:1080px) {
+    height: 65px;
+  }
   .navbar-brand {
     .logo {
       height: 5rem;
